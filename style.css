@@ -1,0 +1,105 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+*{
+ font-family: "poppins", sans-serif;
+ margin: 0;
+ padding: 0;
+ scroll-padding-top: 1rem;
+list-style: none;
+text-decoration: none;
+box-sizing:border-box; 
+}
+/*variables */
+:root{
+    --main-color:#7d9da8;
+    --text-color:#52a1de;
+    --bg-color:#4250b6;
+}
+img{
+  width:100px;
+}
+body{
+    color: var(--text-color)
+}
+.container{
+    max-width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #c7e0ea;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 35px;
+}
+#menu-icon{
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--text-color);
+  display:none;
+}
+.logo{
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style:italic;
+  color: var(--text-color);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.logo span{
+   color: var(--main-color);
+}
+.navbar {
+  display: flex;
+  column-gap: 3rem;
+}
+.navbar a{
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight:500;
+}
+.navbar a:hover{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.navbar a:hover
+.navbar :active{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+#search-icon{
+  font-size: 24px;
+  cursor:pointer;
+}
+.search-box{
+  position:absolute;
+  top:110%;
+  right:0;
+  left:0;
+  background:white;
+  box-shadow: 4px 4px 20px rgb(15 54 55/ 10%);
+  border:1px solid var(--main-color);
+  border-radius: 0.5rem;
+  clip-path: circle(0% at 100% 0%);
+}
+.search-box.active{
+  clip-path: circle(144% at 100% 0%);
+  transition: 0.4s;
+}
+.search-box input{
+  width: 100%;
+  padding:20px;
+  border:none;
+  outline:none;
+  background: transparent;
+  font-size:1rem;
+}
