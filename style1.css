@@ -1,0 +1,94 @@
+style.css
+
+body {
+    background-image: url(../images/R.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    background-attachment: fixed;
+
+}
+.bgm{
+    background-image:url(../images/R.jpeg);
+    background-size: cover;
+}
+
+.main {
+
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 75%;
+    box-shadow: 0 0 20px rgba(249, 72, 72, 0.659);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 25%;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    position:relative;
+    
+    text-align: center;
+}
+
+h1 {
+    color: #ee0505;
+    font-weight: bold;
+}
+h3{
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius:50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+    width: 90%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.ng{
+    color: #ffffff;
+}
+

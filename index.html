@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,36 +9,307 @@
     <link rel="stylesheet" href="style.css">
      <!--Box Icon-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
+    <style>
+        .search-box {
+          position: relative;
+          width: 300px;
+          margin: 20px auto;
+        }
+      
+        #car-search {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+      
+        .suggestions {
+          list-style: none;
+          padding: 0;
+          margin: 5px 0 0;
+          position: absolute;
+          width: 100%;
+          background: #fff;
+          border: 1px solid #ccc;
+          max-height: 200px;
+          overflow-y: auto;
+        }
+      
+        .suggestions li {
+          padding: 10px;
+          cursor: pointer;
+          color: black;
+          border: 1px solid #ccc;
+          border-radius: 0; /* No curve */
+        }
+      
+        .suggestions li:hover {
+          background: #f0f0f0;
+        }
+      </style>
+      
+    </head>
 <body>
-       <!--Nvabbar-->
+       <!--Navbar-->
       <header>
-
         <div class="nav container">
-            <!--Menu Icon-->
-            <i class='bx bx-menu'id="menmu-icon"></i>
+          <!--Menu Icon-->
+          <i class='bx bx-menu'id="menu-icon"></i>
             <!--Logo-->
             <a href="#" class="logo">Car<span>Craft</span></a>
             <!--NavBar List-->
               <ul class="navbar">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#cars">Cars</a></li>
-                <li><a href="#parts">Parts</a></li>
-                <li><a href="#ourblog">Our Blog</a></li>
+                <li><a href="#cars" >Cars</a></li>
+                <li><a href="#parts" >Parts</a></li>
+                <li><a href="login.html" target="_self" id="loginmessage">Login</a></li>
               </ul>
-               <!--Search Icon-->
-               <i class='bx bx-search' id="search-icon"></i>
-               <!--Search box-->
-               <div class="search-box container">
-                 <input type="search" name="" id="" placeholder="search here...">
+              <i class='bx bxs-cart-alt'></i>
+              <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+              <!-- Search Icon -->
+              <i class='bx bx-search' id="search-icon"></i>
+              
+              <!-- Search Box -->
+              <div class="search-box container">
+                <input type="search" id="car-search" placeholder="Search here...">
+                <ul id="suggestions-list" class="suggestions"></ul>
               </div>
+                     </div>
+        </header>
+
+      <!--Home -->
+       <section class="home" id="home">
+          <div class="home-text">
+             <h1>Drive your Dreams<br>Find <span>Your</span> Perfect<span> Car</span> </h1>
+             <p>CarCraft focuses on developing a simple yet effective <br>e-commerce website for selling cars and spare parts.<br> The website  car models and automotive accessories. </p>
+             <!--Home Button-->
+             <a href="#cars" class="btn">Explore Here</a>
+         </div>
+       </section>
+
+       <!--Car section-->
+       <section class="car" id="cars">   
+            <div class="heading">
+            <span>All cars</span></span>
+            <h2>All Types Of Cars Are Available Here</h2>
+            <p>CarCraft have variety of cars available .Carcraft offer variety od cars for everyone and eneywhere<br>As you can see that in the below section.CarCraft have collection of cars such as porsche, Maruti , Kia, Mahindra and so on.<br>You can buy them online on this section. </p>
+            </div>
+       <!--cars Container-->
+          <div class="cars-container container">
+            <!--Box 1-->
+            <div class="box">
+              <a href="maruti.html" target="_self">
+              <img src="../images/maruti_logo.png"  height="300px"alt=""></a>
+              <h2>Maruti</h2>
+            </div>
+            <!--Box 2-->
+            <div class="box">
+              <a href="mahindra.html" target="_self">
+              <img src="../images/mahindra_logo.png"  height="300px"alt=""></a>
+              <h2>Mahindra</h2>
+            </div>
+            <!--Box 3-->
+            <div class="box">
+              <a href="kia.html" target="_self">
+              <img src="../images/kia_logo.png"  height="300px"alt=""></a>
+              <h2>Kia</h2>
+            </div>
+            <!--Box 4-->
+            <div class="box">
+              <a href="porsche.html" target="_self">
+              <img src="../images/porsche_logo.png"  height="300px"alt=""></a>
+              <h2>Porche</h2>
+            </div>
+            <!--Box 5-->
+            <div class="box">
+              <a href="audi.html" target="_self">
+              <img src="../images/audi_logo.png" height="300px" alt=""></a>
+              <h2>Audi</h2>
+            </div>
         </div>
-      </header>
+       </section> 
+
+       <!--About-->
+       <section class="about containner" id="about">
+           <div class="about-img">
+            <img src="../images/about.png" height="650px" alt="">
+            </div>
+            <div class="about-text">
+               <span>About Us</span>
+               <h2>Branded Cars <br>Affordable Price</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptatum. Adipisci mollitia perspiciatis voluptas aspernatur iure cum nam perferendis. Reprehenderit odit consectetur iusto ipsum tenetur! ipsum dolor sit amet, consectetur adipisicing elit. Voluptas officia recusandae sint laudantium, eligendi consequatur.ipsum dolor sit amet consectetur adipisicing elit. Illum temporibus excepturi odit consequuntur deleniti nam dignissimos error, aut incidunt molestias.</p>
+               <!--About Button-->
+               <a href="#blog" class="btn">Learn More</a>
+            </div>
+       </section>
+
+       <!--parts section -->
+       <section class="parts" id="parts">
+            <div class="heading">
+                <span>What We Offer</span>
+                <h2>Our Cars are always Excellent</h2>
+                <p>CarCraft will provide an online platform, expanding the reach of car dealerships and spare parts suppliers to a wider, global audience. Customers from any location can browse an extensive catalog of products at their convenience, overcoming geographic limitations.</p>
+            </div> 
+            <!--parts container-->
+             <div class="parts-container container">
+              <!--Box1-->
+              <div class="box">
+                <img src="../images/parts1.jpg" alt="">
+                <h3>Tiyer</h3>
+                <span>$60.89</span>
+                <i class="bx bxs-star">(5 review)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+              </div>
+              <!--Box2-->
+              <div class="box">
+                <img src="../images/parts2.png" alt="">
+                <h3>Rim</h3>
+                <span>$50.05</span>
+                <i class="bx bxs-star">(10 review)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+              </div>
+              <!--Box3-->
+              <div class="box">
+                <img src="../images/parts3.png" alt="">
+                <h3>Disc brake</h3>
+                <span>$49.50</span>
+                <i class="bx bxs-star">( 8 review)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+              </div>
+              <!--Box4-->
+              <div class="box">
+                <img src="../images/parts4.png" alt="">
+                <h3>Engine</h3>
+                <span>$80.00</span>
+                <i class="bx bxs-star">(1 review)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+              </div>
+              <!--Box5-->
+              <div class="box">
+                <img src="../images/parts5.jpg" alt="">
+                <h3>fuel coil</h3>
+                <span>$60.09</span>
+                <i class="bx bxs-star">(20 review)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+              </div>
+            </div>
+
+      </section>
+        
+      <!--Blog content-->
+         <section class="blog" id="blog">
+          <div class="heading">
+            <span>Blog & News</span>
+            <h2>our Blog Content</h2>
+            <p>CarCraft project aims to demonstrate the power of basic web development tools in creating a practical and engaging e-commerce platform that serves as a starting point for a more complex and fully-featured online store in the future.</p></div>
+          <!--Blog Container-->
+           <div class="blog-container container">
+               <!--Box 1-->
+               <div class="box">
+                  <img src="../images/bg_img1.jpeg" alt="">
+                  <span>Nov 30 2024</span>
+                  <h3>How To Get Perfect Car At Low Price</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum porro impedit quis expedita corrupti reprehenderit perspiciatis, deserunt consequatur laboriosam omnis eveniet quisquam mood.</p>
+                  <a href="#" class="blog-btn">Read More<i class="bx bx-right-arrow-alt"></i></a>
+               </div>
+               <!--Box 2-->
+               <div class="box">
+                <img src="../images/audi1.png" alt="">
+                <span>April 23 2024</span>
+                <h3>How To Get Perfect Car At Low Price</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum porro impedit quis expedita corrupti reprehenderit perspiciatis, deserunt consequatur laboriosam omnis eveniet quisquam mood.</p>
+                <a href="#" class="blog-btn">Read More<i class="bx bx-right-arrow-alt"></i></a>
+             </div>
+             <!--Box 3-->
+             <div class="box">
+              <img src="../images/maruti2.png" alt="">
+              <span>Oct 4 2024</span>
+              <h3>How To Get Perfect Car At Low Price</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum porro impedit quis expedita corrupti reprehenderit perspiciatis, deserunt consequatur laboriosam omnis eveniet quisquam mood.</p>
+              <a href="#" class="blog-btn">Read More<i class="bx bx-right-arrow-alt"></i></a>
+           </div>
+          </div>
+         </section>
+      <!--Footer-->
+      <section class="footer">
+        <div class="footer-container container">
+          <div class="footer-box">
+             <a href="#" class="logo">Car<span>Craft</span></span></a>
+             <div class="social">
+              <a href="#"><i class='bx bxl-facebook'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+              <a href="#"><i class='bx bxl-instagram'></i></a>
+              <a href="#"><i class='bx bxl-youtube'></i></a>
+             </div>
+          </div>
+             <div class="footer-box">
+               <h3>Page</h3>
+               <a href="#">Home</a>
+               <a href="#">Cars</a>
+               <a href="#">parts</a>
+               <a href="#">sales</a>
+             </div>
+             <div class="footer-box">
+              <h3>Legal</h3>
+              <a href="#">Privacy</a>
+              <a href="#">Refund Policy</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <div class="footer-box">
+              <h3>Contact</h3>
+              <p>Ranchi</p>
+              <p>Jharkhand</p>
+              <p>India</p>
+            </div>
+        </div>
+      </section>
+          
+      <!--Copyright-->
+      <div class="copyright">
+        <p>&#169; CarCraft All Rights Reserved</p>
+      </div>
+     
       <!--Link to JS-->
       <script src="main.js"></script>
-
-
+      <script>
+        // List of car names and their corresponding HTML pages
+        const cars = {
+          "Maruti": "maruti.html",
+          "porsche": "porsche.html",
+          "Kia": "kia.html",
+          "Mahindra": "Mahindra.html",
+          "Audi R8": "audi-r8.html"
+        };
+      
+        // DOM Elements
+        const searchInput = document.getElementById("car-search");
+        const suggestionsList = document.getElementById("suggestions-list");
+      
+        // Function to update suggestions
+        searchInput.addEventListener("input", () => {
+          const query = searchInput.value.toLowerCase();
+          suggestionsList.innerHTML = ""; // Clear previous suggestions
+      
+          if (query) {
+            Object.keys(cars).forEach(car => {
+              if (car.toLowerCase().includes(query)) {
+                const li = document.createElement("li");
+                li.textContent = car;
+                li.addEventListener("click", () => {
+                  window.location.href = cars[car]; // Navigate to the car's HTML page
+                });
+                suggestionsList.appendChild(li);
+              }
+            });
+          }
+        });
+      </script>
 </body>
 </html>
